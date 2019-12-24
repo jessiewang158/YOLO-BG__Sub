@@ -54,9 +54,6 @@ Seriously, that's all it takes to do face detection with `cvlib`. Underneath it 
 
 Checkout `face_detection.py` in `examples` directory for the complete code.
 
-### Sample output :
-
-![](examples/images/face_detection_output.jpg)
 
 ## Gender detection
 Once face is detected, it can be passed on to `detect_gender()` function to recognize gender. It will return the labels (man, woman) and associated probabilities.
@@ -116,6 +113,16 @@ cv.animate(frames, '~/Documents/frames.gif')
 ```
 
 ## Background Subtraction
+`mask.py` and `maskMOG.py` provides two methods of background subtraction. `mask.py` simply uses frame differencing, while `maskMOG.py` uses MOG. Feel free to modify these two methods in `object_detect.py`.
+
+```
+from maskMOG import draw_mask
+```
+or
+```
+from mask import draw_mask
+```
+
 
 ## License
 cvlib is released under MIT license.
