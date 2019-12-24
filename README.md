@@ -1,4 +1,6 @@
 [![Downloads](http://pepy.tech/badge/cvlib)](http://pepy.tech/project/cvlib)  [![Gitter](https://badges.gitter.im/arunponnusamy/cvlib.svg)](https://gitter.im/arunponnusamy/cvlib?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)  [![PyPI](https://img.shields.io/pypi/v/cvlib.svg?color=blue)](https://pypi.org/project/cvlib/)
+# YOLO and Background Substraction
+This project is built upon the repository from https://github.com/arunponnusamy/cvlib. Then added background subtraction on top of YOLO Detection.
 
 # cvlib
 A high level easy-to-use open source Computer Vision library for Python.
@@ -67,9 +69,6 @@ Underneath `cvlib` is using a [pre-trained](https://github.com/arunponnusamy/gen
 
 Checkout `gender_detection.py` in `examples` directory for the complete code.
 
-### Sample output :
-
-![](examples/images/gender_detection_output.jpg)
 
 ## Object detection
 Detecting common objects in the scene is enabled through a single function call `detect_common_objects()`. It will return the bounding box co-ordinates, corrensponding labels and confidence scores for the detected objects in the image.
@@ -96,9 +95,6 @@ bbox, label, conf = cv.detect_common_objects(img, confidence=0.25, model='yolov3
 ```
 Check out the [example](examples/object_detection_webcam_yolov3_tiny.py) to learn more.
 
-### Sample output :
-
-![](examples/images/object_detection_output.jpg)
 
 ## Utils
 ### Video to frames
@@ -118,6 +114,8 @@ frames = cv.get_frames('~/Downloads/demo.mp4', '~/Downloads/demo_frames/')
 ```
 cv.animate(frames, '~/Documents/frames.gif')
 ```
+
+## Background Subtraction
 
 ## License
 cvlib is released under MIT license.
