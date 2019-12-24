@@ -122,7 +122,15 @@ or
 ```
 from mask import draw_mask
 ```
+To run the mask generation, use following command
+```
+python yolo_bg.py --image_path
+```
+Before running mask generation, make sure set the background image in `yolo_bg.py`
 
+```
+image_bg=cv2.imread('imgpath')
+```
 
 ## License
 cvlib is released under MIT license.
